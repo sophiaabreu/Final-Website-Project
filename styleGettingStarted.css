@@ -1,0 +1,420 @@
+/* General Styles */
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the height of the viewport */
+}
+  
+/* Header Style*/
+header {
+    background-color: #558B6E;
+    color: #ffffff;
+    padding: 25px 0;
+}
+  
+.logo {
+    margin: 0;
+}
+  
+.logo a {
+    color: #edd885;
+    text-decoration: none;
+    font-size: 40px;
+}
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+nav ul li a {
+    font-family:'Lucida Sans';
+    font-size: 23px;
+    color: #2d2a2a;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+  
+nav ul li a:hover {
+    color: #E6D697;
+}
+  
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9BB8AA;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content li {
+    display: block;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Rest of the Content */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    color: #684d1d;
+    margin-bottom: 15px;
+}
+  
+article {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+  
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Trending Post */
+#trending {
+    padding: 40px 0;
+    text-align: center;
+}
+  
+#trending .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+#trending h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+  
+.trending-articles {
+    display: flex;
+    justify-content: space-between;
+    width: 300%;
+    max-width: 800px;
+    gap: 50px;
+    margin: 0 auto;
+    margin-right: 250px;
+}
+  
+.trending-articles article {
+    flex: 0 0 calc(50% - 20px);
+    background-color: #D1BCE3;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+  
+#trending article h3 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 25px;
+}
+  
+@media (max-width: 768px) {
+    .trending-articles article {
+      flex: 0 0 100%;
+    }
+}
+
+.post-content img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Introduction */
+.intro-section {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+  
+.intro-section h1 {
+    font-size: 60px;
+    color: #9bb8aa;
+}
+  
+.intro-section p {
+    font-size: 30px;
+    color: #2d2a2a;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+  
+/* Side-by-side sections */
+.side-by-side-sections {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+  
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.embracing-city, .urban-gardening {
+  flex: 0 0 calc(50% - 20px); /* Set each section to occupy half of the container width with some spacing */
+}
+
+.section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Individual sections */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+  
+.section h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #af9c50;
+    margin-bottom: 40px;
+}
+  
+.section p {
+    font-size: 28px;
+    color: #2d2a2a;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+.section ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+    font-size: 25px;
+    margin-right: 250px;
+    margin-left: 250px;
+    text-align: justify;
+}
+
+.section li {
+    margin-bottom: 8px;
+}
+  
+.section li strong {
+    font-weight: bold;
+}
+  
+/* Conclusion section */
+.section:last-child {
+    border: none;
+    margin-bottom: 300px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 10px; /* Adjust the gap between images */
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+}
+  
+.image-grid img {
+    width: 70%; /* Make sure images fill their container */
+    height: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Subscribe section */
+.subscribe {
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+  
+.subscribe .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
+.subscribe h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+  
+.subscribe p {
+    font-size: 25px;
+    color: #2d2a2a;
+    margin-bottom: 50px;
+}
+  
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.subscribe-form input[type="email"], input[type="text"], .subscribe-form button {
+    width: 200%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #605a5a;
+    margin-bottom: 20px;
+}
+  
+.subscribe-form button {
+    border: none;
+    background-color: #E6D697;
+    border: #af9e5b;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: #242222;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 200px;
+}
+  
+.subscribe-form button:hover {
+    background-color: #fbfdff;
+    color: #2d2a2a;
+}
+
+a {
+    color: #e6d697;
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #558B6E;
+    color: #2d2a2a;
+    padding: 30px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%; /* Ensure the footer spans the entire width */
+}
+  
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+  
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.footer-column {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+  
+.footer-column h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+.footer-column p {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+  
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+  
+.footer-column ul li a {
+    color: #2d2a2a;
+    font-size: 23px;
+    text-decoration: none;
+}
+  
+/*Footer subscription form*/
+.footer-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.footer-form input[type="email"] {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid #605a5a;
+    margin-right: 50px;
+}
+  
+.footer-form input[type="submit"] {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E6D697;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: #242222;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+  
+.footer-form input[type="submit"]:hover {
+    background-color: #fbfdff;
+    color: #2d2a2a;
+}
+  
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
